@@ -1,5 +1,20 @@
 import { NavLink } from "react-router-dom";
 
+import { FaNewspaper } from 'react-icons/fa';
+import { FaUsers } from 'react-icons/fa';
+import { FaFolderOpen } from 'react-icons/fa';
+import { FaPenNib } from 'react-icons/fa';
+import { FaSun } from 'react-icons/fa';
+import { FaUser } from 'react-icons/fa';
+import { FaMountainSun } from 'react-icons/fa6';
+import { FaSliders } from 'react-icons/fa6';
+import { FaArrowRight } from 'react-icons/fa';
+import { FaInfoCircle } from 'react-icons/fa';
+import { FaChevronRight } from 'react-icons/fa';
+import { FaStar } from 'react-icons/fa';
+import { FaClock } from 'react-icons/fa';
+import { FaEnvelope } from 'react-icons/fa';
+
 function Home({ posts } : any){
  return(
     <>
@@ -34,39 +49,35 @@ function Home({ posts } : any){
             <div className="flex flex-col sm:flex-row justify-center gap-4 mb-16">
                 <NavLink className="btn-primary inline-flex items-center justify-center gap-2 group" to="/blog" data-discover="true">
                 <span>استكشف المقالات</span>
-                <svg className="w-5 h-5 group-hover:-translate-x-1 transition-transform rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
+                <FaArrowRight className="w-5 h-5 group-hover:-translate-x-1 transition-transform rotate-180" />
                 </NavLink>
                 <NavLink className="btn-secondary inline-flex items-center justify-center gap-2" to="/about" data-discover="true">
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
+                <FaInfoCircle className="w-5 h-5" />
                 <span>اعرف المزيد</span>
                 </NavLink>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto">
-                <div className="glass-card p-4 hover:scale-105 transition-transform duration-300" style={{animationDelay: '0ms'}}>
-                <i className="fa-solid fa-newspaper text-2xl text-orange-500 mb-1" />
+                <div className="glass-card p-4 hover:scale-105 transition-transform duration-300 flex flex-col items-center text-center" style={{animationDelay: '0ms'}}>
+                <FaNewspaper className="text-2xl text-orange-500 mb-1" />
                 <p className="text-2xl md:text-3xl font-bold gradient-text">+50</p>
                 <p className="text-neutral-500 text-sm">مقالة</p>
                 </div>
-                <div className="glass-card p-4 hover:scale-105 transition-transform duration-300" style={{animationDelay: '100ms'}}>
-                <i className="fa-solid fa-users text-2xl text-orange-500 mb-1" />
+                <div className="glass-card p-4 hover:scale-105 transition-transform duration-300 flex flex-col items-center text-center" style={{animationDelay: '100ms'}}>
+                <FaUsers className="text-2xl text-orange-500 mb-1" />
                 <p className="text-2xl md:text-3xl font-bold gradient-text">
                     +10ألف
                 </p>
                 <p className="text-neutral-500 text-sm">قارئ</p>
                 </div>
-                <div className="glass-card p-4 hover:scale-105 transition-transform duration-300" style={{animationDelay: '200ms'}}>
-                <i className="fa-solid fa-folder-open text-2xl text-orange-500 mb-1" />
-                <p className="text-2xl md:text-3xl font-bold gradient-text">4</p>
-                <p className="text-neutral-500 text-sm">تصنيفات</p>
+                <div className="glass-card p-4 hover:scale-105 transition-transform duration-300 flex flex-col items-center text-center" style={{animationDelay: '200ms'}}>
+                    <FaFolderOpen className="text-2xl text-orange-500 mb-1" />
+                    <p className="text-2xl md:text-3xl font-bold gradient-text">4</p>
+                    <p className="text-neutral-500 text-sm">تصنيفات</p>
                 </div>
-                <div className="glass-card p-4 hover:scale-105 transition-transform duration-300" style={{animationDelay: '300ms'}}>
-                <i className="fa-solid fa-pen-nib text-2xl text-orange-500 mb-1" />
-                <p className="text-2xl md:text-3xl font-bold gradient-text">6</p>
-                <p className="text-neutral-500 text-sm">كاتب</p>
+                <div className="glass-card p-4 hover:scale-105 transition-transform duration-300 flex flex-col items-center text-center" style={{animationDelay: '300ms'}}>
+                    <FaPenNib className="text-2xl text-orange-500 mb-1" />
+                    <p className="text-2xl md:text-3xl font-bold gradient-text">6</p>
+                    <p className="text-neutral-500 text-sm">كاتب</p>
                 </div>
             </div>
             </div>
@@ -84,8 +95,8 @@ function Home({ posts } : any){
                 محتوى منتقى لبدء رحلة تعلمك
                 </p>
             </div>
-            <NavLink className="group inline-flex items-center gap-2 px-5 py-2.5 bg-linear-to-r from-orange-500 to-orange-600 text-white rounded-xl font-medium transition-all duration-300 hover:-translate-y-0.5" to="/blog" data-discover="true">عرض الكل<svg className="w-4 h-4 group-hover:-translate-x-1 transition-transform rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
+            <NavLink className="group inline-flex items-center gap-2 px-5 py-2.5 bg-linear-to-r from-orange-500 to-orange-600 text-white rounded-xl font-medium transition-all duration-300 hover:-translate-y-0.5" to="/blog" data-discover="true">عرض الكل
+            <FaChevronRight className="w-4 h-4 group-hover:-translate-x-1 transition-transform rotate-180" />
             </NavLink>
             </div>
             <div className="space-y-8">
@@ -98,8 +109,8 @@ function Home({ posts } : any){
                         <img alt={post.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out" src={post.image} />
                         <div className="absolute inset-0 bg-linear-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                         <div className="absolute top-4 right-4">
-                            <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-linear-to-r from-orange-500 to-yellow-500 text-white text-xs font-semibold rounded-full"><svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+                            <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-linear-to-r from-orange-500 to-yellow-500 text-white text-xs font-semibold rounded-full">
+                                <FaStar className="w-3.5 h-3.5" />
                                 مميز
                                 </span>
                         </div>
@@ -109,8 +120,8 @@ function Home({ posts } : any){
                             <span className="px-3 py-1 bg-orange-500/10 text-orange-500 text-xs font-semibold rounded-full border border-orange-500/20">
                                 {post.category}
                             </span>
-                            <span className="flex items-center gap-1 text-sm text-neutral-500"><svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                            <span className="flex items-center gap-1 text-sm text-neutral-500">
+                                <FaClock className="w-4 h-4" />
                                 {post.readTime}
                                 </span>
                         </div>
@@ -135,9 +146,7 @@ function Home({ posts } : any){
                             </div>
                             <span className="inline-flex items-center gap-2 text-orange-500 font-semibold text-sm group-hover:gap-3 transition-all duration-300">
                                 اقرأ المقال
-                                <svg className="w-5 h-5 rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                            </svg>
+                                <FaArrowRight className="w-5 h-5 rotate-180" />
                             </span>
                             </div>
                             </div>
@@ -163,7 +172,7 @@ function Home({ posts } : any){
                 <div className="absolute inset-0 bg-linear-to-br from-orange-500 to-yellow-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                     <div className="relative z-10">
                     <div className="w-12 h-12 bg-orange-500/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-white/20 transition-colors duration-300 border border-orange-500/20 group-hover:border-transparent">
-                        <i className="fa-solid fa-sun text-xl text-orange-500 group-hover:text-white transition-colors duration-300" />
+                        <FaSun className="text-xl text-orange-500 group-hover:text-white transition-colors duration-300" />
                     </div>
                     <h3 className="font-bold text-lg text-white group-hover:text-white transition-colors duration-300 mb-1">
                         إضاءة
@@ -172,16 +181,14 @@ function Home({ posts } : any){
                         3 مقالة
                     </p>
                     <div className="absolute top-6 left-6 w-8 h-8 rounded-full bg-[#262626] flex items-center justify-center opacity-0 group-hover:opacity-100 group-hover:bg-white/20 transition-all duration-300">
-                    <svg className="w-4 h-4 text-white rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
+                    <FaChevronRight className="w-4 h-4 text-white rotate-180" />
                     </div>
                 </div>
             </NavLink>
             <NavLink className="group relative block p-6 rounded-2xl bg-[#161616] border border-[#262626] overflow-hidden hover:border-orange-500/30 transition-all duration-500 hover:-translate-y-1" to="/blog?category=بورتريه" data-discover="true" style={{animationDelay: '100ms'}}><div className="absolute inset-0 bg-linear-to-br from-orange-600 to-orange-400 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 <div className="relative z-10">
                 <div className="w-12 h-12 bg-orange-500/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-white/20 transition-colors duration-300 border border-orange-500/20 group-hover:border-transparent">
-                    <i className="fa-solid fa-user text-xl text-orange-500 group-hover:text-white transition-colors duration-300" />
+                    <FaUser className="text-xl text-orange-500 group-hover:text-white transition-colors duration-300" />
                 </div>
                 <h3 className="font-bold text-lg text-white group-hover:text-white transition-colors duration-300 mb-1">
                 بورتريه
@@ -190,16 +197,14 @@ function Home({ posts } : any){
                 3 مقالة
                 </p>
                 <div className="absolute top-6 left-6 w-8 h-8 rounded-full bg-[#262626] flex items-center justify-center opacity-0 group-hover:opacity-100 group-hover:bg-white/20 transition-all duration-300">
-                <svg className="w-4 h-4 text-white rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
+                <FaChevronRight className="w-4 h-4 text-white rotate-180" />
                 </div>
                 </div>
             </NavLink>
             <NavLink className="group relative block p-6 rounded-2xl bg-[#161616] border border-[#262626] overflow-hidden hover:border-orange-500/30 transition-all duration-500 hover:-translate-y-1" to="/blog?category=مناظر طبيعية" data-discover="true" style={{animationDelay: '200ms'}}><div className="absolute inset-0 bg-linear-to-br from-orange-500 to-yellow-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             <div className="relative z-10">
             <div className="w-12 h-12 bg-orange-500/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-white/20 transition-colors duration-300 border border-orange-500/20 group-hover:border-transparent">
-                <i className="fa-solid fa-mountain-sun text-xl text-orange-500 group-hover:text-white transition-colors duration-300" />
+                <FaMountainSun className="text-xl text-orange-500 group-hover:text-white transition-colors duration-300" />
             </div>
             <h3 className="font-bold text-lg text-white group-hover:text-white transition-colors duration-300 mb-1">
                 مناظر طبيعية
@@ -208,15 +213,13 @@ function Home({ posts } : any){
                 2 مقالة
             </p>
             <div className="absolute top-6 left-6 w-8 h-8 rounded-full bg-[#262626] flex items-center justify-center opacity-0 group-hover:opacity-100 group-hover:bg-white/20 transition-all duration-300">
-                <svg className="w-4 h-4 text-white rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
+                <FaChevronRight className="w-4 h-4 text-white rotate-180" />
             </div></div>
             </NavLink>
             <NavLink className="group relative block p-6 rounded-2xl bg-[#161616] border border-[#262626] overflow-hidden hover:border-orange-500/30 transition-all duration-500 hover:-translate-y-1" to="/blog?category=تقنيات" data-discover="true" style={{animationDelay: '300ms'}}><div className="absolute inset-0 bg-linear-to-br from-orange-500 to-yellow-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             <div className="relative z-10">
             <div className="w-12 h-12 bg-orange-500/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-white/20 transition-colors duration-300 border border-orange-500/20 group-hover:border-transparent">
-                <i className="fa-solid fa-sliders text-xl text-orange-500 group-hover:text-white transition-colors duration-300" />
+                <FaSliders className="text-xl text-orange-500 group-hover:text-white transition-colors duration-300" />
             </div>
             <h3 className="font-bold text-lg text-white group-hover:text-white transition-colors duration-300 mb-1">
                 تقنيات
@@ -225,15 +228,13 @@ function Home({ posts } : any){
                 5 مقالة
             </p>
             <div className="absolute top-6 left-6 w-8 h-8 rounded-full bg-[#262626] flex items-center justify-center opacity-0 group-hover:opacity-100 group-hover:bg-white/20 transition-all duration-300">
-                <svg className="w-4 h-4 text-white rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
+                <FaChevronRight className="w-4 h-4 text-white rotate-180" />
             </div></div>
             </NavLink>
             <NavLink className="group relative block p-6 rounded-2xl bg-[#161616] border border-[#262626] overflow-hidden hover:border-orange-500/30 transition-all duration-500 hover:-translate-y-1" to="/blog?category=معدات" data-discover="true" style={{animationDelay: '400ms'}}><div className="absolute inset-0 bg-linear-to-br from-orange-500 to-yellow-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             <div className="relative z-10">
             <div className="w-12 h-12 bg-orange-500/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-white/20 transition-colors duration-300 border border-orange-500/20 group-hover:border-transparent">
-                <i className="fa-solid fa-sun text-xl text-orange-500 group-hover:text-white transition-colors duration-300" />
+                <FaSun className="text-xl text-orange-500 group-hover:text-white transition-colors duration-300" />
             </div>
             <h3 className="font-bold text-lg text-white group-hover:text-white transition-colors duration-300 mb-1">
                 معدات
@@ -242,9 +243,7 @@ function Home({ posts } : any){
                 3 مقالة
             </p>
             <div className="absolute top-6 left-6 w-8 h-8 rounded-full bg-[#262626] flex items-center justify-center opacity-0 group-hover:opacity-100 group-hover:bg-white/20 transition-all duration-300">
-                <svg className="w-4 h-4 text-white rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
+                <FaChevronRight className="w-4 h-4 text-white rotate-180" />
             </div></div>
             </NavLink>
             </div>
@@ -262,8 +261,9 @@ function Home({ posts } : any){
                 محتوى جديد طازج من المطبعة
                 </p>
             </div>
-            <NavLink className="group inline-flex items-center gap-2 text-orange-500 font-semibold hover:text-orange-400 transition-colors" to="/blog" data-discover="true">عرض جميع المقالات<svg className="w-5 h-5 group-hover:-translate-x-1 transition-transform rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg></NavLink>
+            <NavLink className="group inline-flex items-center gap-2 text-orange-500 font-semibold hover:text-orange-400 transition-colors" to="/blog" data-discover="true">عرض جميع المقالات
+            <FaArrowRight className="w-5 h-5 group-hover:-translate-x-1 transition-transform rotate-180" />
+                </NavLink>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
@@ -280,8 +280,8 @@ function Home({ posts } : any){
                     </div>
                     <div className="p-6">
                     <div className="flex items-center gap-3 text-sm text-neutral-500 mb-3">
-                        <span className="flex items-center gap-1"><svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                        <span className="flex items-center gap-1">
+                            <FaClock className="w-4 h-4" />
                                 {post.readTime}
                             </span>
                             <span className="w-1 h-1 bg-neutral-600 rounded-full" /><span>
@@ -303,9 +303,7 @@ function Home({ posts } : any){
                         </div>
                         </div>
                         <div className="w-8 h-8 rounded-full bg-orange-500/10 flex items-center justify-center group-hover:bg-orange-500 transition-colors duration-300 border border-orange-500/20 group-hover:border-transparent">
-                        <svg className="w-4 h-4 text-orange-500 group-hover:text-white transition-colors duration-300 rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                        </svg>
+                        <FaChevronRight className="w-4 h-4 text-orange-500 group-hover:text-white transition-colors duration-300 rotate-180" />
                         </div>
                     </div></div></NavLink>
                 </article>
@@ -319,9 +317,7 @@ function Home({ posts } : any){
                 <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="bg-[#161616] rounded-3xl border border-[#262626] p-8 md:p-12 lg:p-16 text-center">
                         <div className="w-16 h-16 bg-linear-to-br from-orange-500 to-orange-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                            <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                            </svg>
+                            <FaEnvelope className="w-8 h-8 text-white" />
                         </div>
                         <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                         اشترك في <span className="gradient-text">نشرتنا الإخبارية</span>

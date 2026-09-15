@@ -1,6 +1,15 @@
 import { useEffect, useState } from "react";
 import { NavLink, useSearchParams } from "react-router-dom";
 
+// React-Icon
+import { FaNewspaper } from "react-icons/fa6";
+import { FaSearch } from 'react-icons/fa';
+import { HiViewGrid } from 'react-icons/hi';
+import { FaBars } from 'react-icons/fa';
+import { FaRegClock } from 'react-icons/fa';
+import { FaChevronRight } from 'react-icons/fa';
+import { FaChevronLeft } from 'react-icons/fa';
+
 function Blog({ posts }: { posts: any[] }) {
 
 const [currentPage, setCurrentPage] = useState(1);
@@ -31,10 +40,7 @@ return (
             </div>
             <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                 <span className="section-label inline-flex items-center gap-2 mb-6">
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
-                            d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
-                    </svg>
+                    <FaNewspaper className="w-4 h-4" />
                     مدونتنا
                 </span>
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
@@ -52,11 +58,7 @@ return (
                     <div className="relative w-full md:w-80">
                         <input placeholder="ابحث في المقالات..." className="input-dark w-full px-5 py-3 pr-12"
                             type="text" defaultValue="" />
-                        <svg className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-neutral-500" fill="none"
-                            stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
-                                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                        </svg>
+                        <FaSearch className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-neutral-500" />
                     </div>
                     <div className="flex flex-wrap justify-center gap-2">
                         
@@ -79,14 +81,10 @@ return (
                 <div className="flex items-center gap-2">
                     <div className="flex items-center bg-[#161616] border border-[#262626] rounded-xl p-1">
                         <button className="p-2 rounded-lg transition-all duration-300 bg-orange-500 text-white" title="عرض شبكي">
-                            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
-                            </svg>
+                            <HiViewGrid className="w-5 h-5" />
                         </button>
                         <button className="p-2 rounded-lg transition-all duration-300 text-neutral-400 hover:text-white" title="عرض قائمة">
-                            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-                            </svg>
+                            <FaBars className="w-5 h-5" />
                         </button>
                     </div>
                 </div>
@@ -112,10 +110,7 @@ return (
                         <div className="p-6">
                             <div className="flex items-center gap-3 text-sm text-neutral-500 mb-3">
                                 <span className="flex items-center gap-1">
-                                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
-                                            d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                    </svg>
+                                    <FaRegClock className="w-4 h-4" />
                                     {post.readTime} 
                                 </span>
                                 <span className="w-1 h-1 bg-neutral-600 rounded-full" />
@@ -140,11 +135,7 @@ return (
                                 </div>
                                 <div
                                     className="w-8 h-8 rounded-full bg-orange-500/10 flex items-center justify-center group-hover:bg-orange-500 transition-colors duration-300 border border-orange-500/20 group-hover:border-transparent">
-                                    <svg className="w-4 h-4 text-orange-500 group-hover:text-white transition-colors duration-300 rotate-180"
-                                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
-                                            d="M9 5l7 7-7 7" />
-                                    </svg>
+                                    <FaChevronRight className="w-4 h-4 text-orange-500 group-hover:text-white transition-colors duration-300 rotate-180" />
                                 </div>
                             </div>
                         </div>
@@ -158,9 +149,7 @@ return (
             {/* pages */}
             <div className="flex justify-center items-center gap-2 mt-12">             
                 <button onClick={() => setCurrentPage(prev => prev - 1)} disabled={currentPage === 1} className="p-3 rounded-xl border transition-all duration-300 bg-[#161616] border-[#262626] text-white hover:border-orange-500/50 hover:bg-[#1a1a1a] disabled:opacity-50 disabled:cursor-not-allowed">
-                    <svg className="w-5 h-5 rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" >
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                    </svg>
+                    <FaChevronLeft className="w-5 h-5 rotate-180" />
                 </button>
                 <div className="flex items-center gap-1">
                     {Array.from({ length: totalPages },(_, index) => index + 1 ).map((page) => (
@@ -170,9 +159,7 @@ return (
                     ))}
                 </div>
                 <button onClick={() => setCurrentPage(prev => prev + 1)} disabled={currentPage === totalPages} className="p-3 rounded-xl border transition-all duration-300 bg-[#161616] border-[#262626] text-white hover:border-orange-500/50 hover:bg-[#1a1a1a] disabled:opacity-50 disabled:cursor-not-allowed">
-                    <svg className="w-5 h-5 rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" >
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
+                    <FaChevronRight className="w-5 h-5 rotate-180" />
                 </button>
             </div>
 
