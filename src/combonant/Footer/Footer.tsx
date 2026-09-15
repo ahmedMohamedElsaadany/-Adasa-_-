@@ -7,7 +7,7 @@ import { FaLinkedinIn } from 'react-icons/fa';
 import { FaYoutube } from 'react-icons/fa';
 import { FaChevronRight } from 'react-icons/fa';
 
-function Fotter(){
+function Footer(){
     return (
         <>
         <footer className="relative bottom-0 bg-[#0a0a0a] text-neutral-300 overflow-hidden border-t border-[#262626]">
@@ -131,4 +131,4 @@ function Fotter(){
         </>
     )
 }
-export default Fotter
+export default Footer

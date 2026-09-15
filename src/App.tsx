@@ -1,7 +1,7 @@
 import data from "../posts.json"
 import './App.css'
 import Header from './combonant/Header/Header';
-import Fotter from './combonant/Fotter/Fotter';
+import Footer from './combonant/Footer/Footer';
 import Content from './combonant/Content/Content';
 
 
@@ -14,7 +14,7 @@ function App() {
 
       <Header />
       <Content posts={data.posts} />
-      <Fotter />
+      <Footer />
     </>
   )
 }
