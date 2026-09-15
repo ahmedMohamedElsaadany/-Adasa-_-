@@ -36,6 +36,9 @@ hover:border-orange-500
     @apply opacity-0;
 
 }
+.input-dark{
+    @apply w-full rounded-xl px-5 py-4 text-white bg-[#161616] border border-[#262626] outline-none transition-all duration-300 focus:border-orange-500
+}
 
 @keyframes blob {
     0% {
