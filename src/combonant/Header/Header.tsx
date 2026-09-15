@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 import logo from "../../assets/images/logo.png";
+import { FaSearch } from 'react-icons/fa';
 function   Header() {
     return (
 
@@ -21,7 +22,7 @@ function   Header() {
         </ul>
         <div className="flex gap-4">
             <button className="p-3 text-neutral-500 hover:text-orange-500 hover:bg-[#161616] rounded-xl transition-all duration-300 border border-transparent hover:border-[#262626]">
-                A
+                <FaSearch />
             </button>
             <NavLink to="/blog" className="btn-primary text-sm hover:-translate-y-1 duration-100" >
                  ابدأ القراءة
