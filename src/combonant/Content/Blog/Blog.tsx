@@ -80,6 +80,7 @@ function Blog({ posts }: { posts: any[] }) {
         <div className="sticky top-20 z-40 bg-[#0a0a0a]/90 backdrop-blur-xl border-b border-[#262626]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
             <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+              {/* خانة البحث */}
               <div className="relative w-full md:w-80">
                 <input
                   placeholder="ابحث في المقالات..."
@@ -93,7 +94,9 @@ function Blog({ posts }: { posts: any[] }) {
                 />
                 <FaSearch className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-neutral-500" />
               </div>
-              <div className="flex flex-wrap justify-center gap-2">
+
+              {/* حاوية الأزرار: تم استخدام التمرير الأفقي بسلاسة للموبايل والتوسيط للشاشات الأكبر */}
+              <div className="w-full md:w-auto flex items-center gap-2 overflow-x-auto pb-2 md:pb-0 scrollbar-none justify-start md:justify-end">
                 {categories.map((category) => (
                   <button
                     key={category}
@@ -108,8 +111,8 @@ function Blog({ posts }: { posts: any[] }) {
                     }}
                     className={
                       selectedCategory === category
-                        ? "px-4 py-2 rounded-xl text-sm font-medium transition-all duration-300 bg-linear-to-r from-orange-500 to-orange-600 text-white"
-                        : "px-4 py-2 rounded-xl text-sm font-medium transition-all duration-300 bg-[#161616] text-neutral-400 border border-[#262626] hover:border-orange-500/30"
+                        ? "px-4 py-2 rounded-xl text-sm font-medium transition-all duration-300 bg-linear-to-r from-orange-500 to-orange-600 text-white shrink-0"
+                        : "px-4 py-2 rounded-xl text-sm font-medium transition-all duration-300 bg-[#161616] text-neutral-400 border border-[#262626] hover:border-orange-500/30 shrink-0"
                     }
                   >
                     {category}
@@ -162,7 +165,12 @@ function Blog({ posts }: { posts: any[] }) {
           </div>
           {/* article */}
           <div
-            className={ viewMode === "grid" ? "grid md:grid-cols-2 lg:grid-cols-3 gap-8" : "flex flex-col gap-6" } >
+            className={
+              viewMode === "grid"
+                ? "grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+                : "flex flex-col gap-6"
+            }
+          >
             {currentPosts.length > 0 ? (
               currentPosts.map((post: any) => (
                 <article
