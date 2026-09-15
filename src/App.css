@@ -1,0 +1,75 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
+
+.btn-primary{
+     @apply cursor-pointer px-8 py-4 font-semibold text-white transition-all duration-300 bg-linear-to-br from-orange-500 to-orange-600 rounded-full justify-center items-center inline-flex
+    }
+.glass-card{
+    @apply rounded-3xl backdrop-blur-[20px] bg-[#161616]/80 border border-[#262626]
+}
+.gradient-text{
+    @apply bg-linear-to-br from-orange-500 to-amber-400 bg-clip-text text-transparent
+}
+.section-label{
+    @apply mb-6 inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-orange-500 bg-orange-500/10 border border-orange-500/30 rounded-full
+}
+.btn-secondary{
+    @apply   cursor-pointer px-8 py-4 font-semibold text-white transition-all duration-300 bg-transparent border border-[#333] rounded-full justify-center items-center
+  inline-flex hover:text-orange-500
+hover:bg-orange-500/10
+hover:border-orange-500
+}
+.section-title{
+    @apply font-bold text-white text-5xl leading-tight
+}
+.section-subtitle{
+    @apply mt-4 text-lg leading-relaxed text-neutral-400
+}
+.card{
+    @apply rounded-3xl transition-all duration-500 bg-[#161616] border border-[#262626] overflow-hidden hover:-translate-y-2
+}
+.blob {
+    @apply absolute rounded-full blur-3xl opacity-50;
+}
+
+.animate-fade-in {
+    @apply opacity-0;
+
+}
+
+@keyframes blob {
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    33% {
+        transform: translate(30px, -50px) scale(1.1);
+    }
+
+    66% {
+        transform: translate(-20px, 20px) scale(0.9);
+    }
+
+    100% {
+        transform: translate(0, 0) scale(1);
+    }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+body {
+    font-family: Tajawal, system-ui, -apple-system, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
