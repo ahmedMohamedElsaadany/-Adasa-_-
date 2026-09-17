@@ -184,22 +184,13 @@ function About({ posts }: any) {
                       {post.author.role}
                     </p>
                     <div className="flex justify-center gap-3">
-                      <NavLink
-                        to="#"
-                        className="w-9 h-9 bg-[#262626] rounded-lg flex items-center justify-center text-neutral-500 hover:bg-orange-500 hover:text-white transition-colors"
-                      >
+                      <NavLink to="#" className="w-9 h-9 bg-[#262626] rounded-lg flex items-center justify-center text-neutral-500 hover:bg-orange-500 hover:text-white transition-colors">
                         <FaXTwitter className="w-4 h-4" />
                       </NavLink>
-                      <NavLink
-                        to="#"
-                        className="w-9 h-9 bg-[#262626] rounded-lg flex items-center justify-center text-neutral-500 hover:bg-neutral-700 hover:text-white transition-colors"
-                      >
+                      <NavLink to="#" className="w-9 h-9 bg-[#262626] rounded-lg flex items-center justify-center text-neutral-500 hover:bg-neutral-700 hover:text-white transition-colors">
                        <FaGithub className="w-4 h-4" />
                       </NavLink>
-                      <NavLink
-                        to="#"
-                        className="w-9 h-9 bg-[#262626] rounded-lg flex items-center justify-center text-neutral-500 hover:bg-blue-600 hover:text-white transition-colors"
-                      >
+                      <NavLink to="#" className="w-9 h-9 bg-[#262626] rounded-lg flex items-center justify-center text-neutral-500 hover:bg-blue-600 hover:text-white transition-colors">
                         <FaLinkedinIn className="w-4 h-4" />
                       </NavLink>
                     </div>
