@@ -29,10 +29,22 @@ function About({ posts }: any) {
               <div className="absolute bottom-20 right-20 w-96 h-96 bg-yellow-500/10 rounded-full blur-[120px]" />
             </div>
             <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-              <span className="section-label inline-flex items-center gap-2 mb-6">
-                <span className="w-2 h-2 bg-orange-500 rounded-full animate-pulse" />
-                من نحن
-              </span>
+              <div className="inline-flex items-center gap-2 mb-8 section-label">
+                <span className="relative flex h-2 w-2">
+                    <span className="absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span>
+                    <span className="relative inline-flex h-2 w-2 rounded-full bg-orange-400"></span>
+                </span>
+
+                <span className="relative flex h-2 w-2">
+                    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-orange-500 opacity-75"></span>
+                    <span className="relative inline-flex h-2 w-2 rounded-full bg-orange-500"></span>
+                </span>
+
+                <span className="text-sm font-medium text-neutral-300">
+                   من نحن
+                </span>
+
+            </div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
                 مهمتنا هي{" "}
                 <span className="gradient-text">الإعلام والإلهام</span>

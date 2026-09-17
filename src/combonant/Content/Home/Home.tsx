@@ -26,18 +26,21 @@ function Home({ posts } : any){
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-125 h-125 bg-orange-500/5 rounded-full blur-3xl" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
             <div className="text-center max-w-4xl mx-auto">
-            <div className="section-label inline-flex items-center gap-2 mb-8 animate-fade-in">
+            <div className="inline-flex items-center gap-2 mb-8 section-label">
                 <span className="relative flex h-2 w-2">
-                <span className="absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-orange-400"></span>
+                    <span className="absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span>
+                    <span className="relative inline-flex h-2 w-2 rounded-full bg-orange-400"></span>
                 </span>
+
                 <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-500 opacity-75">
+                    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-orange-500 opacity-75"></span>
+                    <span className="relative inline-flex h-2 w-2 rounded-full bg-orange-500"></span>
                 </span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-orange-500">
+
+                <span className="text-sm font-medium text-neutral-300">
+                    مرحباً بك في عدسة
                 </span>
-                </span>
-                <span className="text-sm font-medium text-neutral-300">مرحباً بك في عدسة</span>
+
             </div>
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight tracking-tight">
                 اكتشف <span className="gradient-text">فن</span><br />التصوير
